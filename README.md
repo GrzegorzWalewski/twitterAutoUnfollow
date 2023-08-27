@@ -1,6 +1,8 @@
 # twitterAutoUnfollow
 Automate process of unfollowing people that dont follow you back on Twitter (X)
 
+[NOTICE] There will be a lot of errors in console - i didn't spend any time on validation of request.result tree. However you dont have to mind it, thoes errors dont brake anything ;)
+
 ## 1. Step
 Go to followers list: https://twitter.com/YourUsername/following
 ## 2. Step
