@@ -31,7 +31,7 @@ function onStateChange(event) {
 // Part 3 - after we scroll to the bottom
 
 async function unfollow(usersToUnfollow) {
-   for (var userId of usersToUnfollow) {
+   for (var [index, userId] of usersToUnfollow.entries()) {
       await delay(5000);
       await fetch("https://twitter.com/i/api/1.1/friendships/destroy.json", {
          "credentials": "include",
@@ -57,6 +57,10 @@ async function unfollow(usersToUnfollow) {
          "mode": "cors"
       });
       await delay(getRandomInt(10) * 1000);
+      console.log(`${index + 1} out of ${usersToUnfollow.length} has been unfollowed`);
+      if (index === usersToUnfollow.length - 1) {
+         alert('all non followers are unfollowed');
+      }
    }
 }
 
